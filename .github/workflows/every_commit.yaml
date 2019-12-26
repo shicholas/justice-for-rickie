@@ -1,0 +1,26 @@
+name: every_commit
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - name: Install global dependencies.
+        run: npm i -g gatsby-cli yarn typescript
+      - name: Install dependencies.
+        run: yarn install
+      - name: Run linting.
+        run: yarn lint
+      - name: Run TypeScript type checking.
+        run: yarn check-types
+      - name: Run jest test suite.
+        run: yarn test
+      - name: Build the application.
+        run: yarn build

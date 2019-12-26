@@ -1,0 +1,38 @@
+name: production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  push_to_aws:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Set Node.js.
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - name: Install global dependencies.
+        run: npm i -g gatsby-cli yarn typescript
+      - name: Install dependencies.
+        run: yarn
+      - name: Build application for production.
+        run: yarn build
+      - name: Push to S3 bucket to be served with CloudFront.
+        run: yarn deploy --yes
+        env:
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Run a CloudFront invalidation
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id $CLOUDFRONT_DISTRIBUTION \
+            --paths "/*"
+        env:
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          CLOUDFRONT_DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}

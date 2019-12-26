@@ -1,0 +1,28 @@
+{
+    "auth": {
+        "signupMessage": "Welcome to Justice for Rickie Slaughter!",
+        "login": "Login"
+    },
+    "languages": {
+        "language": "Language",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "header": {
+        "title": "Justice for Rickie Slaughter",
+        "blog": "Blog",
+        "causes": "Causes",
+        "contact": "Contact",
+        "litigation": "Litigation",
+        "passItOn": "Pass It On",
+        "noFaultDivorce": "No Fault Divorce",
+        "trafficTickets": "Traffic Tickets",
+        "about": "About Us",
+        "services": "Services",
+        "justiceForRickieSlaughter": "Justice For Rickie Slaughter"
+    },
+    "footer": {
+        "callUs": "Call us at",
+        "builtWith": "Built with"
+    }
+}
