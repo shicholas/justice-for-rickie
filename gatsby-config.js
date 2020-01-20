@@ -20,7 +20,6 @@ module.exports = {
       },
       resolve: 'gatsby-plugin-module-resolver',
     },
-    'gatsby-plugin-material-ui',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -38,14 +37,6 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
     },
     'gatsby-plugin-react-helmet',
-    {
-      options: {
-        fonts: [
-          'material icons',
-        ],
-      },
-      resolve: 'gatsby-plugin-google-fonts',
-    },
     {
       options: {
         component: require.resolve('./src/layouts/BaseLayout.tsx'),
