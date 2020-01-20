@@ -27,7 +27,7 @@ const justiceForRickie = () => {
 
       <a href="https://www.change.org/p/people-interested-in-criminal-justice-free-rickie-slaughter/share_for_starters?just_created=true&tag_selected=politics">
         <button>
-          "Sign Rickie's Petition"
+          Sign Petition
         </button>
       </a>
 

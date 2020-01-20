@@ -2,14 +2,14 @@ import Helmet from 'react-helmet';
 import React from 'react';
 import { useSiteMetadata } from '../hooks';
 
-interface ISeoProps {
+interface SeoProps {
   description?: string;
   lang?: string;
   meta?: any[];
   title?: string;
 }
 
-export const Seo: React.FC<ISeoProps> = (
+export const Seo: React.FC<SeoProps> = (
   { description = '', lang = 'en', meta = [], title }
 ) => {
   const {

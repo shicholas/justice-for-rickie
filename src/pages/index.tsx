@@ -8,7 +8,7 @@ import { makeBlogPath } from '../utils/dynamicUrls';
 const IndexPage = ({ data }) => {
   return (
     <MainLayout>
-      <Alert>Welcome to Justice for Rickie!</Alert>;
+      <Alert>Welcome to Justice for Rickie!</Alert>
 
       {data.cms.blogPosts.map((blog, i) => (
         <p key={i}>
