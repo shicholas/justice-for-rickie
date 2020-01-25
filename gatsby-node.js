@@ -7,13 +7,17 @@ exports.createPages = async ({ actions, graphql }) => {
       cms {
         blogPosts(where: { status: PUBLISHED }) {
           id
+          slug
           createdAt
         }
       }
     }
   `);
 
-  data.cms.blogPosts.forEach(blog => {
+  const blogPosts = data.cms.blogPosts;
+  console.log(blogPosts);
+
+  blogPosts.forEach(blog => {
     actions.createPage({
       component: path.resolve('./src/containers/blog-post.js'),
       context: {
