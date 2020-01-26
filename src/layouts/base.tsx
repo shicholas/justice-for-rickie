@@ -24,7 +24,11 @@ const baseLayout: React.FC = ({ children }) => {
       <ThemeProvider theme={{ orbit: customTokens }}>
         <>
           <NavigationBar />
-          <main style={{ marginTop: '72px' }}>
+          <main style={{
+            marginLeft: '1em',
+            marginRight: '1em',
+            marginTop: '72px',
+          }}>
             {children}
           </main>
         </>
