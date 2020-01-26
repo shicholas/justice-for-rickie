@@ -1,23 +1,22 @@
 import { Link, graphql } from 'gatsby';
 import Alert from '@kiwicom/orbit-components/lib/Alert';
-import { MainLayout } from '@layouts/MainLayout';
 import React from 'react';
 import { makeBlogPath } from '../utils/dynamicUrls';
 
 
 const IndexPage = ({ data }) => {
   return (
-    <MainLayout>
+    <>
       <Alert>Welcome to Justice for Rickie!</Alert>
 
       {data.cms.blogPosts.map((blog, i) => (
-        <p key={i}>
+        <div key={i}>
           <Link to={makeBlogPath(blog)}>
             <p>{blog.text.markdown}</p>
           </Link>
-        </p>
+        </div>
       ))}
-    </MainLayout>
+    </>
   );
 };
 

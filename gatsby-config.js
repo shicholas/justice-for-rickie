@@ -39,7 +39,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     {
       options: {
-        component: require.resolve('./src/layouts/BaseLayout.tsx'),
+        component: require.resolve('./src/layouts/base.tsx'),
       },
       resolve: 'gatsby-plugin-layout',
     },

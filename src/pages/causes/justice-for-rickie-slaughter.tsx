@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import { MainLayout } from '@layouts/MainLayout';
 import React from 'react';
 
 /* eslint-disable max-len */
@@ -19,7 +18,7 @@ const justiceForRickie = () => {
     `
   );
   return (
-    <MainLayout>
+    <>
       <Image
         fluid={data.rickie.childImageSharp.fluid}
         alt={'Rickie at his graduation'}
@@ -37,7 +36,7 @@ const justiceForRickie = () => {
         </button>
       </a>
 
-    </MainLayout>
+    </>
   );
 };
 
