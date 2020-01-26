@@ -1,13 +1,34 @@
+import './base.css';
+
 import { NavigationBar } from '@components/navigationBar';
 import React from 'react';
+import ThemeProvider from '@kiwicom/orbit-components/lib/ThemeProvider';
+import getTokens from '@kiwicom/orbit-components/lib/getTokens';
 
 const baseLayout: React.FC = ({ children }) => {
+  const notoSerif =
+    'https://fonts.googleapis.com/css?family=Noto+Serif&display=swap';
+
+  const customTokens = getTokens({
+    base: {
+      fontFamily: 'Noto Serif, serif'
+    },
+  });
+
   return (
     <>
-      <NavigationBar />
-      <main style={{ marginTop: '72px' }}>
-        {children}
-      </main>
+      <link
+        href={notoSerif}
+        rel="stylesheet"
+      />
+      <ThemeProvider theme={{ orbit: customTokens }}>
+        <>
+          <NavigationBar />
+          <main style={{ marginTop: '72px' }}>
+            {children}
+          </main>
+        </>
+      </ThemeProvider>
     </>
   );
 };
