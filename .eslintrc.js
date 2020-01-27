@@ -4,7 +4,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['react', '@typescript-eslint', 'import', 'jest'],
+  plugins: ['react', '@typescript-eslint', 'import'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
@@ -29,8 +29,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   env: {
     node: true,
-    browser: true,
-    "jest/globals": true
+    browser: true
   },
   settings: {
     react: {

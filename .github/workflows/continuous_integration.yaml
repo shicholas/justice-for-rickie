@@ -1,14 +1,15 @@
-name: every_commit
+---
+name: continuous_integration
 
-on: [push]
+on:
+  - push
 
 jobs:
-  build:
+  tests_and_linting:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@master
-      - name: Set Node.js
+      - name: Set Node.js.
         uses: actions/setup-node@master
         with:
           node-version: 12
@@ -20,7 +21,10 @@ jobs:
         run: yarn lint
       - name: Run TypeScript type checking.
         run: yarn check-types
-      - name: Run jest test suite.
-        run: yarn test
+      - name: Run integration tests with cypress.
+        uses: cypress-io/github-action@master
+        with:
+          start: yarn dev
+          wait-on: http://localhost:8000
       - name: Build the application.
         run: yarn build

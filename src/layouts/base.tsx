@@ -31,6 +31,13 @@ const baseLayout: React.FC = ({ children }) => {
           }}>
             {children}
           </main>
+          <a
+            href="https://github.com/shicholas/justice-for-rickie"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GitHub
+          </a>
         </>
       </ThemeProvider>
     </>

@@ -1,21 +1,39 @@
 import { Link, graphql } from 'gatsby';
-import Alert from '@kiwicom/orbit-components/lib/Alert';
 import React from 'react';
+import Text from '@kiwicom/orbit-components/lib/Text';
 import { makeBlogPath } from '../utils/dynamicUrls';
 
 
+/* eslint-disable */
 const IndexPage = ({ data }) => {
+  const blogPosts = data.cms.blogPosts;
+  const pageCopy = data.cms.pages[0].text.html;
   return (
     <>
-      <Alert>Welcome to Justice for Rickie!</Alert>
+      <Text>
+        <div dangerouslySetInnerHTML={{ __html: pageCopy }} />
+      </Text>
 
-      {data.cms.blogPosts.map((blog, i) => (
+      {blogPosts.map((blog, i) => (
         <div key={i}>
           <Link to={makeBlogPath(blog)}>
             <p>{blog.text.markdown}</p>
           </Link>
         </div>
       ))}
+
+
+      <a href="https://www.change.org/p/people-interested-in-criminal-justice-free-rickie-slaughter">
+        <button>
+          Sign Petition
+        </button>
+      </a>
+
+      <a href="https://www.amazon.com/gp/video/detail/0FWLLKVNWELA60OE9FXYMNICE5">
+        <button>
+          Hard Time
+        </button>
+      </a>
     </>
   );
 };
@@ -31,6 +49,11 @@ export const query = graphql`
         slug
         text {
           markdown
+        }
+      }
+      pages(where: {url: "/"}) {
+        text {
+          html
         }
       }
     }

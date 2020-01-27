@@ -1,9 +1,7 @@
-import NavigationList, {
-  NavigationListItem
-} from '@kiwicom/orbit-components/lib/NavigationList';
-import { Link } from 'gatsby';
+import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
 import { default as NavBar } from '@kiwicom/orbit-components/lib/NavigationBar';
 import React from 'react';
+import { navigate } from 'gatsby';
 
 export const NavigationBar = () => {
   const handleDrawerOpen = () => {
@@ -11,19 +9,23 @@ export const NavigationBar = () => {
   };
 
   return (
-    <NavBar onMenuOpen={handleDrawerOpen} >
-      <NavigationList type="inline">
-        <NavigationListItem>
-          <Link to="/">
-            Justice For Rickie Slaughter
-          </Link>
-        </NavigationListItem>
-        <NavigationListItem>
-          <Link to="/contact">
-            Contact
-          </Link>
-        </NavigationListItem>
-      </NavigationList>
+    <NavBar
+      onMenuOpen={handleDrawerOpen}
+      dataTest="navigation"
+    >
+      <ButtonLink
+        type="secondary"
+        transparent={true}
+        onClick={() => { navigate('/'); }}
+      >
+        Justice For Rickie
+      </ButtonLink>
+      <ButtonLink
+        type="secondary"
+        transparent
+        onClick={() => { navigate('/contact'); }}>
+        Contact
+      </ButtonLink>
     </NavBar>
   );
 };

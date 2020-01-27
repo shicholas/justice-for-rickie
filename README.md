@@ -1,25 +1,21 @@
 # Justice for Rickie Slaughter
 
+![Continuous Integration](https://github.com/shicholas/justice-for-rickie/workflows/continuous_integration/badge.svg)
+![Continuous Deployment](https://github.com/shicholas/justice-for-rickie/workflows/continuous_deployment/badge.svg)
+
 A website built with gatsby.js hosted at www.justiceforrickieslaughter.com
 
 ## Running Locally
 
-You must have Docker installed on your machine.
-
-> Do not run `npm` or `yarn` on your machine, instead do everything in Docker.
+You must have node installed on your machine and yarn as a global node package.
 
 ```bash
-docker-compose up
+yarn
+yarn dev
 ```
 
 Then navigate to `localhost:8000` to see the website ran on your machine.
 
-## TODO
-
-* Go through the TODOs
-* Turn ListItemText into something that uses I18n
-* Fix Top Navbar - Make it always sticky
-
 ### Legal
 
-Copyright 2019 Nicholas Shook. MIT License.
+Copyright 2020 Nicholas Shook. MIT License.

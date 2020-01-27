@@ -34,6 +34,19 @@ const ContactRickiePage = () => {
           type="text"
           value={formik.values.name}
         />
+        <InputField
+          autoComplete="off"
+          dataTest="contact-email"
+          error={formik.errors.name}
+          id="ID"
+          label="Email"
+          name="email"
+          onBlur={formik.handleBlur}
+          onChange={formik.handleChange}
+          placeholder="Your Email"
+          type="text"
+          value={formik.values.name}
+        />
       </form>
     </>
   );
