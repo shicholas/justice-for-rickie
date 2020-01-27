@@ -10,7 +10,7 @@
     "aws-appsync-auth-link": "^2.0.1",
     "dateformat": "^3.0.3",
     "formik": "^2.1.2",
-    "gatsby": "2.18.22",
+    "gatsby": "2.19.6",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-intl": "^0.3.2",
     "gatsby-plugin-layout": "^1.1.21",
