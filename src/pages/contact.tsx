@@ -1,19 +1,8 @@
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 import React from 'react';
 import Text from '@kiwicom/orbit-components/lib/Text';
-import { useFormik } from 'formik';
 
 const ContactRickiePage = () => {
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-    },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-  console.log(formik);
-
   return (
     <>
       <Heading>
@@ -31,7 +20,6 @@ const ContactRickiePage = () => {
         method="POST"
       >
         <Text>
-
           Your email: <input type="text" name="_replyto" />
         </Text>
         <Text>
