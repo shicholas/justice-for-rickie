@@ -6856,6 +6856,13 @@ gatsby-page-utils@^0.0.38:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-hotjar-tracking@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-hotjar-tracking/-/gatsby-plugin-hotjar-tracking-1.0.0.tgz#67952e430d9cc4cf981d3547862f20eeeeabe75d"
+  integrity sha512-BhsIbAaXgA/gQm0edf5E693RMy6tmgV0eadeOSP+oup8upU0oAX9dF/1GnpDKvYkXpERxav9crTXX/Suo15AvA==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-intl@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-intl/-/gatsby-plugin-intl-0.3.2.tgz#22507d283d718624afee81be29676cb909b56fc0"

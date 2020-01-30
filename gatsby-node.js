@@ -15,15 +15,16 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
 
   const blogPosts = data.cms.blogPosts;
-  console.log(blogPosts);
 
   blogPosts.forEach(blog => {
+    const { createdAt, id, slug } = blog;
+
     actions.createPage({
       component: path.resolve('./src/containers/blog-post.js'),
       context: {
-        blogId: blog.id,
+        id,
       },
-      path: makeBlogPath(blog),
+      path: makeBlogPath({ createdAt, slug }),
     });
   });
 };

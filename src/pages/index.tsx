@@ -8,6 +8,13 @@ import { makeBlogPath } from '../utils/dynamicUrls';
 const IndexPage = ({ data }) => {
   const blogPosts = data.cms.blogPosts;
   const pageCopy = data.cms.pages[0].text.html;
+  const changeDotOrgPetition =
+    'https://www.change.org/p/' +
+    'people-interested-in-criminal-justice-free-rickie-slaughter';
+
+  const hardTimes =
+    'https://www.amazon.com/gp/video/detail/0FWLLKVNWELA60OE9FXYMNICE5';
+
   return (
     <>
       <Text>
@@ -16,20 +23,20 @@ const IndexPage = ({ data }) => {
 
       {blogPosts.map((blog, i) => (
         <div key={i}>
-          <Link to={makeBlogPath(blog)}>
+          <Link key={i} to={makeBlogPath(blog)}>
             <p>{blog.text.markdown}</p>
           </Link>
         </div>
       ))}
 
 
-      <a href="https://www.change.org/p/people-interested-in-criminal-justice-free-rickie-slaughter">
+      <a href={changeDotOrgPetition}>
         <button>
           Sign Petition
         </button>
       </a>
 
-      <a href="https://www.amazon.com/gp/video/detail/0FWLLKVNWELA60OE9FXYMNICE5">
+      <a href={hardTimes}>
         <button>
           Hard Time
         </button>

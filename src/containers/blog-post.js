@@ -15,9 +15,9 @@ const blogPost = ({ data }) => {
 export default blogPost;
 
 export const query = graphql`
-  query($blogId: ID!) {
+  query($id: ID!) {
     cms {
-      blogPost(where: { id: $blogId }) {
+      blogPost(where: { id: $id }) {
         id
         createdAt
         slug

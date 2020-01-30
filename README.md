@@ -22,7 +22,7 @@ This app uses graphcms.com to power the data rendered in this web-application.
 
 ## The Cloud
 
-This app is hosted on AWS and can be found at www.justiceforrickieslaughter.com. It is deployed 
+This app is hosted on AWS and can be found at www.justiceforrickieslaughter.com. It is deployed
 upon pushes to `master` with GitHub Actions.
 
 ## Legal

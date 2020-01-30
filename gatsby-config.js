@@ -65,6 +65,14 @@ module.exports = {
       },
       resolve: 'gatsby-plugin-s3',
     },
+    {
+      options: {
+        id: 1665739,
+        includeInDevelopment: true,
+        sv: 6
+      },
+      resolve: 'gatsby-plugin-hotjar-tracking'
+    },
     'gatsby-plugin-offline',
   ],
   siteMetadata: {
