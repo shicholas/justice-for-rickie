@@ -3,7 +3,7 @@
 ![Continuous Integration](https://github.com/shicholas/justice-for-rickie/workflows/continuous_integration/badge.svg)
 ![Continuous Deployment](https://github.com/shicholas/justice-for-rickie/workflows/continuous_deployment/badge.svg)
 
-A website built with gatsby.js hosted at www.justiceforrickieslaughter.com
+A website built with gatsby.js hosted at www.justiceforrickieslaughter.com.
 
 ## Running Locally
 
@@ -16,6 +16,10 @@ yarn dev
 
 Then navigate to `localhost:8000` to see the website ran on your machine.
 
-### Legal
+## The Backend
+
+This app uses graphcms.com to power the data rendered in this web-application.
+
+## Legal
 
 Copyright 2020 Nicholas Shook. MIT License.
