@@ -38,6 +38,13 @@ const baseLayout: React.FC = ({ children }) => {
           >
             GitHub
           </a>
+          <a
+            href="https://twitter.com/Justice4Rickie"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Twitter
+          </a>
         </>
       </ThemeProvider>
     </>
