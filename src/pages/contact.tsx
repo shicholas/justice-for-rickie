@@ -1,6 +1,7 @@
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 import InputField from '@kiwicom/orbit-components/lib/InputField';
 import React from 'react';
+import Text from '@kiwicom/orbit-components/lib/Text';
 import { useFormik } from 'formik';
 
 const ContactRickiePage = () => {
@@ -19,6 +20,13 @@ const ContactRickiePage = () => {
       <Heading>
         Contact Rickie
       </Heading>
+
+      <Text>
+        You can send a letter to Rickie at
+        Rickie Slaughter NV #85902
+        1250 E Arica Road
+        Eloy, AZ 85131
+      </Text>
 
       <form onSubmit={formik.handleSubmit}>
         <InputField

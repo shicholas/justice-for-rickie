@@ -32,7 +32,6 @@ const IndexPage = ({ data }) => {
         </div>
       ))}
 
-
       <a href={changeDotOrgPetition}>
         <button>
           Sign Petition
