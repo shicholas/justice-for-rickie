@@ -20,6 +20,11 @@ Then navigate to `localhost:8000` to see the website ran on your machine.
 
 This app uses graphcms.com to power the data rendered in this web-application.
 
+## The Cloud
+
+This app is hosted on AWS and can be found at www.justiceforrickieslaughter.com. It is deployed 
+upon pushes to `master` with GitHub Actions.
+
 ## Legal
 
 Copyright 2020 Nicholas Shook. MIT License.
