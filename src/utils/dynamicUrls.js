@@ -1,7 +1,5 @@
-const dateformat = require('dateformat');
-
 exports.makeBlogPath = ({ createdAt, slug }) => {
   const date = new Date(createdAt);
-  const formattedDate = dateformat(date, 'yyyy-mm-dd');
+  const formattedDate = date.toISOString().split('T')[0];
   return `/blog-post/${formattedDate}-${slug}`;
 };
