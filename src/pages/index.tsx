@@ -1,10 +1,10 @@
 import { Link, graphql } from 'gatsby';
+import Alert from '@kiwicom/orbit-components/lib/Alert';
 import React from 'react';
 import Text from '@kiwicom/orbit-components/lib/Text';
 import { makeBlogPath } from '../utils/dynamicUrls';
 
 
-/* eslint-disable */
 const IndexPage = ({ data }) => {
   const blogPosts = data.cms.blogPosts;
   const pageCopy = data.cms.pages[0].text.html;
@@ -17,6 +17,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <Alert>
+        Help an innocent man who has been serving time since June 29, 2004.
+      </Alert>
       <Text>
         <div dangerouslySetInnerHTML={{ __html: pageCopy }} />
       </Text>
