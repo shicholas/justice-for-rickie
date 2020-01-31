@@ -11,7 +11,7 @@
     "aws-appsync-auth-link": "^2.0.1",
     "gatsby": "2.19.10",
     "gatsby-image": "^2.2.39",
-    "gatsby-plugin-hotjar-tracking": "^1.0.0",
+    "gatsby-plugin-hotjar-tracking": "^1.1.0",
     "gatsby-plugin-intl": "^0.3.2",
     "gatsby-plugin-layout": "^1.1.21",
     "gatsby-plugin-manifest": "^2.2.40",
