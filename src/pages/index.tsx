@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       {blogPosts.map((blog, i) => (
         <div key={i}>
           <Link key={i} to={makeBlogPath(blog)}>
-            <p>{blog.text.markdown}</p>
+            {blog.text.markdown}
           </Link>
         </div>
       ))}

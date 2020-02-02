@@ -1,5 +1,6 @@
 import './base.css';
 
+import { Footer } from '@components/footer';
 import { NavigationBar } from '@components/navigationBar';
 import React from 'react';
 import ThemeProvider from '@kiwicom/orbit-components/lib/ThemeProvider';
@@ -31,20 +32,7 @@ const baseLayout: React.FC = ({ children }) => {
           }}>
             {children}
           </main>
-          <a
-            href="https://github.com/shicholas/justice-for-rickie"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://twitter.com/Justice4Rickie"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Twitter
-          </a>
+          <Footer />
         </>
       </ThemeProvider>
     </>
