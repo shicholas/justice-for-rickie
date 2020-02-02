@@ -1,13 +1,14 @@
-import { Link, graphql } from 'gatsby';
 import Alert from '@kiwicom/orbit-components/lib/Alert';
-import Button from '@kiwicom/orbit-components/lib/Button';
+import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
 import React from 'react';
-import Text from '@kiwicom/orbit-components/lib/Text';
-import { makeBlogPath } from '../utils/dynamicUrls';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
+const HTMLFromGraphCMS = styled.div`
+  font-family: ${({ theme }) => theme.orbit.fontFamily};
+`;
 
 const IndexPage = ({ data }) => {
-  const blogPosts = data.cms.blogPosts;
   const pageCopy = data.cms.pages[0].text.html;
   const changeDotOrgPetition =
     'https://www.change.org/p/' +
@@ -21,29 +22,15 @@ const IndexPage = ({ data }) => {
       <Alert>
         Help an innocent man who has been serving time since June 29, 2004.
       </Alert>
-      <Text>
-        <div dangerouslySetInnerHTML={{ __html: pageCopy }} />
-      </Text>
+      <HTMLFromGraphCMS dangerouslySetInnerHTML={{ __html: pageCopy }} />
 
-      {blogPosts.map((blog, i) => (
-        <div key={i}>
-          <Link key={i} to={makeBlogPath(blog)}>
-            {blog.text.markdown}
-          </Link>
-        </div>
-      ))}
+      <ButtonLink href={changeDotOrgPetition}>
+        Sign Petition
+      </ButtonLink>
 
-      <a href={changeDotOrgPetition}>
-        <Button>
-          Sign Petition
-        </Button>
-      </a>
-
-      <a href={hardTimes}>
-        <Button>
-          Hard Time
-        </Button>
-      </a>
+      <ButtonLink href={hardTimes}>
+        Hard Time
+      </ButtonLink>
     </>
   );
 };
@@ -53,14 +40,6 @@ export default IndexPage;
 export const query = graphql`
   query {
     cms {
-      blogPosts {
-        id
-        createdAt
-        slug
-        text {
-          markdown
-        }
-      }
       pages(where: {url: "/"}) {
         text {
           html

@@ -19,7 +19,7 @@ const baseLayout: React.FC = ({ children }) => {
 
   const customTokens = getTokens({
     base: {
-      fontFamily: 'Noto Serif, serif'
+      fontFamily: 'Noto Serif, serif',
     },
   });
 

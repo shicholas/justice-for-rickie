@@ -1,6 +1,6 @@
 import { Github, Twitter } from '@icons-pack/react-simple-icons';
-import React from 'react';
 import Grid from '@kiwicom/orbit-components/lib/utils/Grid';
+import React from 'react';
 import Text from '@kiwicom/orbit-components/lib/Text';
 
 import styled from 'styled-components';

@@ -4,13 +4,9 @@ import React from 'react';
 import { navigate } from 'gatsby';
 
 export const NavigationBar = () => {
-  const handleDrawerOpen = () => {
-    alert('opened drawer');
-  };
-
   return (
     <NavBar
-      onMenuOpen={handleDrawerOpen}
+      onMenuOpen={null}
       dataTest="navigation"
     >
       <ButtonLink
@@ -25,6 +21,12 @@ export const NavigationBar = () => {
         transparent
         onClick={() => { navigate('/contact'); }}>
         Contact
+      </ButtonLink>
+      <ButtonLink
+        type="secondary"
+        transparent
+        onClick={() => { navigate('/blog'); }}>
+        Blog
       </ButtonLink>
     </NavBar>
   );
