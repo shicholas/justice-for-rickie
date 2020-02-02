@@ -1,5 +1,6 @@
 import { Link, graphql } from 'gatsby';
 import Alert from '@kiwicom/orbit-components/lib/Alert';
+import Button from '@kiwicom/orbit-components/lib/Button';
 import React from 'react';
 import Text from '@kiwicom/orbit-components/lib/Text';
 import { makeBlogPath } from '../utils/dynamicUrls';
@@ -33,15 +34,15 @@ const IndexPage = ({ data }) => {
       ))}
 
       <a href={changeDotOrgPetition}>
-        <button>
+        <Button>
           Sign Petition
-        </button>
+        </Button>
       </a>
 
       <a href={hardTimes}>
-        <button>
+        <Button>
           Hard Time
-        </button>
+        </Button>
       </a>
     </>
   );

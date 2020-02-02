@@ -1,6 +1,9 @@
+import Button from '@kiwicom/orbit-components/lib/Button';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
+import InputField from '@kiwicom/orbit-components/lib/InputField';
 import React from 'react';
 import Text from '@kiwicom/orbit-components/lib/Text';
+import Textarea from '@kiwicom/orbit-components/lib/Textarea';
 
 const ContactRickiePage = () => {
   return (
@@ -20,13 +23,13 @@ const ContactRickiePage = () => {
         method="POST"
       >
         <Text>
-          Your email: <input type="text" name="_replyto" />
+          Your email: <InputField type="text" name="_replyto" />
         </Text>
         <Text>
-          Your message: <textarea name="message" />
+          Your message: <Textarea name="message" />
         </Text>
 
-        <button type="submit">Send Information</button>
+        <Button submit={true} type="primary">Send Information</Button>
       </form>
     </>
   );

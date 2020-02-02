@@ -5,6 +5,13 @@ import { NavigationBar } from '@components/navigationBar';
 import React from 'react';
 import ThemeProvider from '@kiwicom/orbit-components/lib/ThemeProvider';
 import getTokens from '@kiwicom/orbit-components/lib/getTokens';
+import styled from 'styled-components';
+
+const Site = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`;
 
 const baseLayout: React.FC = ({ children }) => {
   const notoSerif =
@@ -23,9 +30,10 @@ const baseLayout: React.FC = ({ children }) => {
         rel="stylesheet"
       />
       <ThemeProvider theme={{ orbit: customTokens }}>
-        <>
+        <Site>
           <NavigationBar />
           <main style={{
+            flex: 1,
             marginLeft: '1em',
             marginRight: '1em',
             marginTop: '72px',
@@ -33,7 +41,7 @@ const baseLayout: React.FC = ({ children }) => {
             {children}
           </main>
           <Footer />
-        </>
+        </Site>
       </ThemeProvider>
     </>
   );
