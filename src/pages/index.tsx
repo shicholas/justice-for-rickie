@@ -21,6 +21,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SixteenByNineImage url='./images/rickie.png' />
+
       <Alert>
         Help an innocent man who has been serving time since June 29, 2004.
       </Alert>

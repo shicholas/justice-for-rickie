@@ -31,12 +31,22 @@ const FlexItem = styled.div`
   flex: 1;
 `;
 
+const MainHeading = styled.h1`
+  font-family: ${({ theme }) => theme.orbit.fontFamily};
+  color: ${({ theme }) => theme.orbit.paletteWhite};
+  font-size: 3vw;
+  text-align: center;
+`;
+
 export const SixteenByNineImage = ({ url }) => {
   return (
     <AspectRatioBox>
       <BackgroundImage backgroundImgUrl={url}>
         <FlexContainer>
           <FlexItem>
+            <MainHeading>
+              Justice for Rickie Slaughter
+            </MainHeading>
           </FlexItem>
         </FlexContainer>
       </BackgroundImage>
