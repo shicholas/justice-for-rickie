@@ -1,6 +1,7 @@
 import Alert from '@kiwicom/orbit-components/lib/Alert';
 import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
 import React from 'react';
+import { SixteenByNineImage } from '@components/SixteenByNineImage';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <SixteenByNineImage url='./images/rickie.png' />
       <Alert>
         Help an innocent man who has been serving time since June 29, 2004.
       </Alert>

@@ -27,7 +27,7 @@ module.exports = {
         /* eslint-disable @typescript-eslint/camelcase */
         background_color: '#000',
         display: 'standalone',
-        icon: 'src/images/rickie.png',
+        icon: 'static/images/rickie.png',
         name: 'Justice for Rickie Slaughter',
         short_name: 'Justice for Rickie Slaughter',
         start_url: '/',
