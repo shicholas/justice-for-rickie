@@ -3,13 +3,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     {
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images/`,
-      },
-      resolve: 'gatsby-source-filesystem',
-    },
-    {
-      options: {
         aliases: {
           '@components': './components',
           '@containers': './containers',
