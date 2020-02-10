@@ -54,9 +54,11 @@ module.exports = {
     },
     {
       options: {
-        bucketName: 'www.justiceforrickieslaughter.com',
+        fieldName: 'api',
+        typeName: 'API',
+        url: 'https://api.justiceforrickieslaughter.com',
       },
-      resolve: 'gatsby-plugin-s3',
+      resolve: 'gatsby-source-graphql',
     },
     {
       options: {
