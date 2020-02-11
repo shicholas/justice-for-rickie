@@ -5,7 +5,7 @@
   "author": "@shicholas",
   "license": "MIT",
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.6.3",
+    "@auth0/auth0-spa-js": "^1.6.4",
     "@aws-amplify/auth": "^2.1.5",
     "@icons-pack/react-simple-icons": "^2.2.0",
     "@kiwicom/orbit-components": "^0.73.0",
