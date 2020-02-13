@@ -25,9 +25,20 @@ yarn
 yarn dev
 ```
 
+## Google Maps
+
+1. Get a Google Cloud Account
+2. Turn on Maps
+3. **Secure your API KEY** https://console.cloud.google.com/apis/credentials
+
 ## Deploying to the Cloud
 
 ### Gatsby Cloud
 
-1. https://www.gatsbyjs.com/dashboard/26208710-65cb-4e7f-b92b-79605dd8e80e/sites/1db146a9-c8de-464f-928f-55d900196f49/production
+1. https://www.gatsbyjs.com/dashboard/
+2. Netlify
+3. Lighthouse scores
 
+## Writing Copy
+
+1. GraphCMS
