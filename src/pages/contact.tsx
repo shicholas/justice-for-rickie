@@ -18,10 +18,17 @@ const ContactRickiePage = () => {
         1250 E Arica Road
         Eloy, AZ 85131
       </Text>
+      <Text>
+        Or, if you fill out your info below, we will mail out a letter on
+        your behalf.
+      </Text>
       <form
         action="https://formspree.io/moqdvlav"
         method="POST"
       >
+        <Text>
+          Your name: <InputField type="text" name="name" />
+        </Text>
         <Text>
           Your email: <InputField type="text" name="_replyto" />
         </Text>
