@@ -1,5 +1,6 @@
 const path = require('path');
-const { makeBlogPath, makeInmatePath } = require('./src/utils/dynamicUrls');
+// const { makeBlogPath, makeInmatePath } = require('./src/utils/dynamicUrls');
+const { makeBlogPath } = require('./src/utils/dynamicUrls');
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
@@ -9,13 +10,6 @@ exports.createPages = async ({ actions, graphql }) => {
           id
           slug
           createdAt
-        }
-      }
-      api {
-        inmates {
-          id
-          offenderId
-          slug
         }
       }
     }
@@ -35,17 +29,17 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   });
 
-  const inmates = data.api.inmates;
+  // const inmates = data.api.inmates;
 
-  inmates.forEach(blog => {
-    const { createdAt, id, offenderId } = blog;
+  // inmates.forEach(blog => {
+  //   const { createdAt, id, offenderId } = blog;
 
-    actions.createPage({
-      component: path.resolve('./src/containers/inmate.js'),
-      context: {
-        id,
-      },
-      path: makeInmatePath({ createdAt, offenderId }),
-    });
-  });
+  //   actions.createPage({
+  //     component: path.resolve('./src/containers/inmate.js'),
+  //     context: {
+  //       id,
+  //     },
+  //     path: makeInmatePath({ createdAt, offenderId }),
+  //   });
+  // });
 };

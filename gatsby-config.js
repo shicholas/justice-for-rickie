@@ -54,14 +54,6 @@ module.exports = {
     },
     {
       options: {
-        fieldName: 'api',
-        typeName: 'API',
-        url: 'https://api.justiceforrickieslaughter.com',
-      },
-      resolve: 'gatsby-source-graphql',
-    },
-    {
-      options: {
         id: 1665739,
         includeInDevelopment: true,
         sv: 6

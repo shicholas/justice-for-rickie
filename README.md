@@ -2,6 +2,9 @@
 
 ![Continuous Integration](https://github.com/shicholas/justice-for-rickie/workflows/continuous_integration/badge.svg)
 ![Continuous Deployment](https://github.com/shicholas/justice-for-rickie/workflows/continuous_deployment/badge.svg)
+.. |license| image:: https://img.shields.io/:license-mit-blue.svg?style=flat-square
+    :target: https://opensource.org/licenses/MIT
+    :alt: License
 
 A website built with gatsby.js hosted at www.justiceforrickieslaughter.com.
 
