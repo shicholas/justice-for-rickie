@@ -25,10 +25,6 @@ const baseLayout: React.FC = ({ children }) => {
 
   return (
     <>
-      <link
-        href={notoSerif}
-        rel="stylesheet"
-      />
       <ThemeProvider theme={{ orbit: customTokens }}>
         <Site>
           <NavigationBar />
@@ -43,6 +39,10 @@ const baseLayout: React.FC = ({ children }) => {
           <Footer />
         </Site>
       </ThemeProvider>
+      <link
+        href={notoSerif}
+        rel="stylesheet"
+      />
     </>
   );
 };
