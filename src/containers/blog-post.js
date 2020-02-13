@@ -1,4 +1,5 @@
 import Heading from '@kiwicom/orbit-components/lib/Heading';
+import { RawHtml } from '@components/rawHtml';
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -8,7 +9,7 @@ const blogPost = ({ data }) => {
     <>
       <Heading>{blogPost.title}</Heading>
       <div>Posted at: {blogPost.createdAt}</div>
-      <div dangerouslySetInnerHTML={{ __html: blogPost.text.html }} />
+      <RawHtml html={blogPost.text.html} />
     </>
   );
 };
