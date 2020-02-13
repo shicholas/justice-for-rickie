@@ -29,11 +29,11 @@ const IndexPage = ({ data }) => {
       <Container>
         <HTMLFromGraphCMS dangerouslySetInnerHTML={{ __html: pageCopy }} />
 
-        <ButtonLink href={changeDotOrgPetition}>
+        <ButtonLink href={changeDotOrgPetition} external={true}>
           Sign Petition
         </ButtonLink>
 
-        <ButtonLink href={hardTimes}>
+        <ButtonLink href={hardTimes} external={true}>
           Hard Time
         </ButtonLink>
       </Container>
