@@ -23,7 +23,6 @@ const IndexPage = ({ data }) => {
     'https://www.amazon.com/gp/video/detail/0FWLLKVNWELA60OE9FXYMNICE5';
 
   const setMap = ({ map, maps }) => {
-    console.log(JSON.stringify(maps));
     const directionsService = new maps.DirectionsService();
     const directionsDisplay = new maps.DirectionsRenderer();
 
