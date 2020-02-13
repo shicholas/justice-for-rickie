@@ -1,5 +1,6 @@
 import Alert from '@kiwicom/orbit-components/lib/Alert';
 import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
+import { Container } from '@components/container';
 import React from 'react';
 import { SixteenByNineImage } from '@components/sixteenByNineImage';
 import { graphql } from 'gatsby';
@@ -21,19 +22,21 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SixteenByNineImage url='./images/rickie.png' />
-
       <Alert>
         Help an innocent man who has been serving time since June 29, 2004.
       </Alert>
-      <HTMLFromGraphCMS dangerouslySetInnerHTML={{ __html: pageCopy }} />
 
-      <ButtonLink href={changeDotOrgPetition}>
-        Sign Petition
-      </ButtonLink>
+      <Container>
+        <HTMLFromGraphCMS dangerouslySetInnerHTML={{ __html: pageCopy }} />
 
-      <ButtonLink href={hardTimes}>
-        Hard Time
-      </ButtonLink>
+        <ButtonLink href={changeDotOrgPetition}>
+          Sign Petition
+        </ButtonLink>
+
+        <ButtonLink href={hardTimes}>
+          Hard Time
+        </ButtonLink>
+      </Container>
     </>
   );
 };

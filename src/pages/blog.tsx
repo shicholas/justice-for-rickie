@@ -1,4 +1,6 @@
 import { graphql, navigate } from 'gatsby';
+import { Container } from '@components/container';
+import Heading from '@kiwicom/orbit-components/lib/Heading';
 import LinkList from '@kiwicom/orbit-components/lib/LinkList';
 import React from 'react';
 import TextLink from '@kiwicom/orbit-components/lib/TextLink';
@@ -8,7 +10,8 @@ const BlogPage = ({ data }) => {
   const blogPosts = data.cms.blogPosts;
 
   return (
-    <>
+    <Container>
+      <Heading>Updates about Rickie</Heading>
       <LinkList direction="column">
         {blogPosts.map((blog, i) => (
           <div key={i}>
@@ -22,7 +25,7 @@ const BlogPage = ({ data }) => {
           </div>
         ))}
       </LinkList>
-    </>
+    </Container>
   );
 };
 
