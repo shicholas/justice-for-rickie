@@ -1,14 +1,15 @@
+import Heading from '@kiwicom/orbit-components/lib/Heading';
 import React from 'react';
 import { graphql } from 'gatsby';
 
 const blogPost = ({ data }) => {
   const blogPost = data.cms.blogPost;
   return (
-    <div>
-      <div>{blogPost.title}</div>
+    <>
+      <Heading>{blogPost.title}</Heading>
       <div>Posted at: {blogPost.createdAt}</div>
       <div dangerouslySetInnerHTML={{ __html: blogPost.text.html }} />
-    </div>
+    </>
   );
 };
 

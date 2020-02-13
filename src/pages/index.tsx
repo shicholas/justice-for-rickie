@@ -1,7 +1,7 @@
 import Alert from '@kiwicom/orbit-components/lib/Alert';
 import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
 import React from 'react';
-import { SixteenByNineImage } from '@components/SixteenByNineImage';
+import { SixteenByNineImage } from '@components/sixteenByNineImage';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 

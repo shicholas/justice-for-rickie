@@ -1,5 +1,7 @@
-import { Link, graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
+import LinkList from '@kiwicom/orbit-components/lib/LinkList';
 import React from 'react';
+import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import { makeBlogPath } from '../utils/dynamicUrls';
 
 const BlogPage = ({ data }) => {
@@ -7,13 +9,19 @@ const BlogPage = ({ data }) => {
 
   return (
     <>
-      {blogPosts.map((blog, i) => (
-        <div key={i}>
-          <Link key={i} to={makeBlogPath(blog)}>
-            {blog.text.markdown}
-          </Link>
-        </div>
-      ))}
+      <LinkList direction="column">
+        {blogPosts.map((blog, i) => (
+          <div key={i}>
+            <TextLink
+              type="primary"
+              onClick={() => { return navigate(makeBlogPath(blog)); }}
+              key={i}
+            >
+              {blog.title}
+            </TextLink>
+          </div>
+        ))}
+      </LinkList>
     </>
   );
 };
@@ -27,9 +35,7 @@ export const query = graphql`
         id
         createdAt
         slug
-        text {
-          markdown
-        }
+        title
       }
     }
   }
