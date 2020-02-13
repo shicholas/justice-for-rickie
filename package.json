@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-source-graphql": "^2.1.33",
     "gatsby-transformer-sharp": "^2.3.14",
+    "google-map-react": "^1.1.6",
     "isomorphic-fetch": "^2.2.1",
     "qs": "^6.9.1",
     "react": "^16.12.0",
