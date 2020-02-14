@@ -2,10 +2,11 @@ import Alert from '@kiwicom/orbit-components/lib/Alert';
 import ButtonLink from '@kiwicom/orbit-components/lib/ButtonLink';
 import { CenteredText } from '@components/centeredText';
 import { Container } from '@components/container';
-import GoogleMapReact from 'google-map-react';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 import React from 'react';
+import { Seo } from '@components/seo';
 import { SixteenByNineImage } from '@components/sixteenByNineImage';
+import { VegasDirections } from '@components/vegasDirections';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -22,27 +23,9 @@ const IndexPage = ({ data }) => {
   const hardTimes =
     'https://www.amazon.com/gp/video/detail/0FWLLKVNWELA60OE9FXYMNICE5';
 
-  const setMap = ({ map, maps }) => {
-    const directionsService = new maps.DirectionsService();
-    const directionsDisplay = new maps.DirectionsRenderer();
-
-    directionsDisplay.setMap(map);
-
-    directionsService.route(
-      {
-        destination: '715 N Nellis Blvd, Las Vegas, NV 89110',
-        origin: '2612 Glory View Ln, North Las Vegas, NV 89032',
-        travelMode: 'DRIVING',
-      }, (result, status) => {
-        if (status == 'OK') {
-          directionsDisplay.setDirections(result);
-        }
-      }
-    );
-  };
-
   return (
     <>
+      <Seo />
       <SixteenByNineImage url='/images/rickie.png' />
       <Alert>
         Help an innocent man who has been serving time since June 29, 2004.
@@ -59,18 +42,7 @@ const IndexPage = ({ data }) => {
           Hard Time
         </ButtonLink>
 
-        <div style={{ height: '35vh', width: '100%' }}>
-          <GoogleMapReact
-            bootstrapURLKeys={
-              { key: 'AIzaSyBWxquloo2cs9BJ4NXC7I2oBygORWl0gSc' }
-            }
-            defaultCenter={{ lat: 36.187, lng: -115.137 }}
-            defaultZoom={13}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={setMap}
-          >
-          </GoogleMapReact>
-        </div>
+        <VegasDirections />
         <CenteredText>
           <Heading type="title3">
             No one can do this drive in 7 minutes.
