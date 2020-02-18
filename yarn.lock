@@ -1031,10 +1031,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@icons-pack/react-simple-icons@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-2.2.0.tgz#bd8082517bae315c28ce4e2b9ee392d6dd8f9028"
-  integrity sha512-CrTTSDDemqsvhT8bsLsFQKEWBenAfjepnY9671gufmpOzrLxyS6LPGdNdamUmwclo5pmmm2eY2YwK7cmCDUOrw==
+"@icons-pack/react-simple-icons@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-2.3.0.tgz#917dd50a9e316b74eb739b292e08f455f2691cd3"
+  integrity sha512-2GU2sgnJjc5zzKU2rUEBxDMZsy3lBL2gwdj3Q6EXmt/eADkdiadazS97QXB05P5s1RpXxXPaYtJDwknfutkj3w==
   dependencies:
     prop-types "^15.7.2"
 
