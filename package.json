@@ -7,7 +7,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.6.4",
     "@aws-amplify/auth": "^2.1.5",
-    "@icons-pack/react-simple-icons": "^2.2.0",
+    "@icons-pack/react-simple-icons": "^2.4.1",
     "@kiwicom/orbit-components": "^0.73.1",
     "aws-appsync": "^3.0.2",
     "aws-appsync-auth-link": "^2.0.1",
