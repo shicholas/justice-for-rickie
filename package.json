@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^9.4.0",
-    "@types/yup": "^0.26.30",
+    "@types/yup": "^0.26.33",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
     "babel-preset-gatsby": "^0.2.29",
