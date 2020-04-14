@@ -11,7 +11,7 @@
     "@kiwicom/orbit-components": "^0.73.1",
     "aws-appsync": "^3.0.2",
     "aws-appsync-auth-link": "^2.0.1",
-    "gatsby": "2.19.16",
+    "gatsby": "2.20.20",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-hotjar-tracking": "^1.1.0",
     "gatsby-plugin-intl": "^0.3.2",
